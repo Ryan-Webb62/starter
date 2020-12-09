@@ -53,7 +53,7 @@ console.log(age1, age2);
  */
 
 // Arrow functions
-
+/* 
 const calcAge3 = (birthYear) => 2037 - birthYear;
 const age3 = calcAge3(1991);
 console.log(age3);
@@ -66,4 +66,20 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
-console.log(yearsUntilRetirement(1980, 'Bob'));
+console.log(yearsUntilRetirement(1980, 'Bob')); */
+
+// Functions calling other functions
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
