@@ -154,7 +154,7 @@ console.log(ages);
 
 // Array methods
 
-const friends = ['Micheal', 'Steve', 'Peter'];
+/* const friends = ['Micheal', 'Steve', 'Peter'];
 
 // Add elements to arrays
 const newLength = friends.push('Jay'); // Adds new element to last position of the array
@@ -182,4 +182,4 @@ console.log(friends.includes('Bob'));
 
 if (friends.includes('Steve')) {
   console.log('You have a friend named Steve');
-}
+} */
