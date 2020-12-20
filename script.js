@@ -183,3 +183,14 @@ console.log(friends.includes('Bob'));
 if (friends.includes('Steve')) {
   console.log('You have a friend named Steve');
 } */
+
+// Introduction to Objects
+// Basic object structure with key value pairs object literal syntax:
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
