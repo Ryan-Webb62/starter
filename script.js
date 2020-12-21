@@ -186,7 +186,7 @@ if (friends.includes('Steve')) {
 
 // Introduction to Objects
 // Basic object structure with key value pairs object literal syntax:
-
+/* 
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
@@ -194,3 +194,47 @@ const jonas = {
   job: 'teacher',
   friends: ['Michael', 'Peter', 'Steven'],
 };
+ */
+
+// Dot vs. Bracket Notation
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+};
+
+console.log(jonas);
+
+// dot notation
+console.log(jonas.lastName);
+// bracket notation
+console.log(jonas['lastName']);
+
+// using bracket notation you can compute the key value
+const nameKey = 'Name';
+
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt(
+  'What do you want to know about Jonas?  Chose between firstName, lastName, age, job, and friends.'
+);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    'Wrong request!  Chose between firstName, lastName, age, job, and friends.'
+  );
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//  Challenge
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`
+);
