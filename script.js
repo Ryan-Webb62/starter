@@ -197,7 +197,7 @@ const jonas = {
  */
 
 // Dot vs. Bracket Notation
-const jonas = {
+/* const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
   age: 2037 - 1991,
@@ -237,4 +237,40 @@ console.log(jonas);
 //  Challenge
 console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`
-);
+); */
+
+// Object Methods
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+  // Calculate the age once and store in the object
+  // Must call this function once before this.age is stored in the object
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  summary: function () {
+    return `${this.firstName} is a ${this.calcAge()} year old, ${
+      this.job
+    }, and he ${
+      this.hasDriversLicense ? 'has' : 'does not have'
+    } a driver's license.`;
+  },
+};
+// Make a method to calculate the age of an object
+// calcAge: function (birthYear) {
+//   return 2037 - birthYear;
+// },
+
+// Use "this" to use the birth year of the object calling the method
+// calcAge: function () {
+//   return 2037 - this.birthYear;
+// },
+
+console.log(jonas.calcAge());
+console.log(jonas.summary());
