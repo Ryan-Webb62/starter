@@ -240,7 +240,7 @@ console.log(
 ); */
 
 // Object Methods
-
+/* 
 const jonas = {
   firstName: 'Jonas',
   lastName: 'Schmedtmann',
@@ -274,3 +274,11 @@ const jonas = {
 
 console.log(jonas.calcAge());
 console.log(jonas.summary());
+ */
+
+// The for Loop
+
+// For loop keeps running while dontition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}🏋️‍♀️`);
+}
