@@ -405,6 +405,7 @@ const characters = [
   },
 ];
 
+/* 
 // ***FILTER***
 //1. Get characters with mass greater than 100
 const greater100Characters = characters.filter((character) => {
@@ -430,4 +431,24 @@ console.log(maleCharacters);
 const femaleCharacters = characters.filter(
   (character) => character.gender === 'female'
 );
-console.log(femaleCharacters);
+console.log(femaleCharacters); 
+*/
+
+// ***MAP****
+
+//1. Get array of all names
+const names = characters.map((character) => character.name);
+console.log(names);
+
+//2. Get array of all heights
+const height = characters.map((character) => character.height);
+console.log(height);
+//3. Get array of objects with just name and height proprties
+const minifiedRecord = characters.map((character) => ({
+  name: character.name,
+  height: character.height,
+}));
+console.log(minifiedRecord);
+//4. Get array of all first names
+const firstName = characters.map((character) => character.name.split(' ')[0]);
+console.log(firstName);
